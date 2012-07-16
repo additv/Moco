@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project Moco with Jar-in-Jar Loader">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="/Users/additv/Documents/workspace/Moco/dist/Moco.jar">
+            <manifest>
+                <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>
+                <attribute name="Rsrc-Main-Class" value="moco.Moco"/>
+                <attribute name="Class-Path" value="."/>
+                <attribute name="Rsrc-Class-Path" value="./ ant-launcher.jar ant.jar core.jar controlP5.jar oscP5.jar themidibus.jar"/>
+            </manifest>
+            <zipfileset src="jar-in-jar-loader.zip"/>
+            <fileset dir="/Users/additv/Documents/workspace/Moco/bin"/>
+            <zipfileset dir="/Users/additv/Documents/workspace/Moco/lib/base/core" includes="ant-launcher.jar"/>
+            <zipfileset dir="/Users/additv/Documents/workspace/Moco/lib/base/core" includes="ant.jar"/>
+            <zipfileset dir="/Users/additv/Documents/workspace/Moco/lib/base/core" includes="core.jar"/>
+            <zipfileset dir="/Users/additv/Documents/workspace/Moco/lib/user/controlP5" includes="controlP5.jar"/>
+            <zipfileset dir="/Users/additv/Documents/workspace/Moco/lib/user/oscP5" includes="oscP5.jar"/>
+            <zipfileset dir="/Users/additv/Documents/workspace/Moco/lib/user/themidibus" includes="themidibus.jar"/>
+        </jar>
+    </target>
+</project>

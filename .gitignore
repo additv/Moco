@@ -1,0 +1,7 @@
+.classpath
+.project
+.settings/**
+application.*/**
+bin/**
+dist/**
+jar-in-jar-loader.zip
